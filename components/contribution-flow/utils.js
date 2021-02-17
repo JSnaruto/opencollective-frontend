@@ -113,6 +113,14 @@ export const generatePaymentMethodOptions = (paymentMethods, stepProfile, stepDe
         ),
       });
     }
+
+    // TODO: Braintree
+    if (true) {
+      uniquePMs.push({
+        key: 'braintree',
+        title: 'PayPal / Venmo / Google Pay / Apple Pay',
+      });
+    }
   }
 
   return uniquePMs;

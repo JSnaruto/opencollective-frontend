@@ -18,6 +18,7 @@ import StyledRadioList from '../StyledRadioList';
 import { P } from '../Text';
 
 import BlockedContributorMessage from './BlockedContributorMessage';
+import BraintreePaymentForm from './BraintreePaymentForm';
 import { generatePaymentMethodOptions, NEW_CREDIT_CARD_KEY } from './utils';
 
 const PaymentMethodBox = styled.div`
@@ -30,14 +31,6 @@ const PaymentMethodBox = styled.div`
     props.index &&
     css`
       border-top: 1px solid ${themeGet('colors.black.200')};
-    `}
-
-  ${props =>
-    !props.disabled &&
-    css`
-      &:hover {
-        background: ${themeGet('colors.black.50')};
-      }
     `}
 `;
 
@@ -191,6 +184,7 @@ const StepPayment = ({
                   {value.instructions}
                 </Box>
               )}
+              {value.key === 'braintree' && checked && <BraintreePaymentForm stepDetails={stepDetails} />}
             </PaymentMethodBox>
           )}
         </StyledRadioList>

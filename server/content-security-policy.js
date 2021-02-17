@@ -42,6 +42,7 @@ const COMMON_DIRECTIVES = {
     'js.stripe.com',
     '*.paypal.com',
     '*.paypalobjects.com',
+    'js.braintreegateway.com',
   ],
   frameSrc: ['www.youtube.com', 'opencollective.com', 'js.stripe.com', '*.paypal.com', '*.openstreetmap.org'],
   objectSrc: ['opencollective.com'],
